@@ -1,0 +1,52 @@
+/* :root {
+  --first: cubic-bezier(0.23, 1, 0.32, 1);
+  --second: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+} */
+
+.form_wrapper {
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+}
+.form {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s var(--first);
+  box-sizing: border-box;
+}
+
+.form_bg {
+  position: absolute;
+  opacity: 0.5;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+  transition: 1s var(--second), opacity 1s 5s var(--second);
+}
+
+.form:hover .form_bg {
+  opacity: 1;
+  transition: 0.6s var(--first), opacity 1s var(--second);
+}
+.form:hover {
+  transition: 0.6s var(--first), box-shadow 2s var(--first);
+  box-shadow: 0 0 40px 5px rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 1), 0 30px 60px 0 rgba(0, 0, 0, 0.66),
+    inset 0 0 0 5px #333, inset 0 0 0 6px white;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .form {
+    width: 95vw;
+    height: 95vh;
+  }
+}
