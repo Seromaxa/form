@@ -44,8 +44,8 @@ form:hover .form_input {
   justify-content: center;
   align-items: center;
   width: 40px;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black;
+  border-radius: 5px; */
   cursor: pointer;
 }
 .button_holder {
